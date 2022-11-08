@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/5720664193.js" crossorigin="anonymous"></script>
+    <!-- style sheet -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Smart</title>
+</head>
+
+<body>
+    <div class="flex flex-col py-5 mx-[10%]">
+        <div class="flex space-x-5 items-center justify-between">
+            <h1 class="text-sky-600 font-bold text-3xl">
+                <a href="/">
+                    Smart
+                    <!-- <img src="./assets/images/logo-sm.svg" /> -->
+                </a>
+            </h1>
+    
+            <div class="flex pt-2 relative mx-auto text-gray-600">
+                <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-2xl text-sm focus:outline-none"
+                    type="search" name="search" placeholder="Search">
+                <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
+                    <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                        viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
+                        width="512px" height="512px">
+                        <path
+                            d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+                    </svg>
+                </button>
+            </div>
+    
+            <ul class="flex items-center space-x-5 text-amber-500 text-xl">
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                </li>
+                <li>
+                    <i class="fa-regular fa-heart"></i>
+                </li>
+                <li>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </li>
+            </ul>
+        </div>
+    
+    
+    
+        <ul class="flex justify-between text-sm items-center mt-10">
+            <li>
+                <p>All our Boxes</p>
+            </li>
+            <li>
+                <p>Stay</p>
+            </li>
+            <li>
+                <p>Sports & Adventure</p>
+            </li>
+            <li>
+                <p>Gastronomy</p>
+            </li>
+            <li>
+                <p>Wellness</p>
+            </li>
+            <li>
+                <p>Multi-Activities</p>
+            </li>
+        </ul>
+    </div>
+
+    <section>
+        <div class="flex flex-col mx-[10%] mt-[5%]">
+            <h1 class="text-4xl "> Your Cart</h1>
+            <hr class="bg-sky-600 w-[10%] mt-5" />
+
+        </div>
+
+        <table class="w-[80%] mx-[10%] mt-[5%]">
+            <tr >
+                <th class="py-2 px-2 bg-sky-600 text-white font-bold">Product</th>
+                <th class="py-2 px-2 bg-sky-600 text-white font-bold">Quantity</th>
+                <th class="py-2 px-2 bg-sky-600 text-white font-bold">Subtotal</th>
+            </tr>
+            <tr>
+                <td class="py-2">
+                    <!-- product info -->
+                    <div class="flex flex-col items-left space-y-5">
+                    <img class="w-[150px] h-[150px]" src="./assets/images/product/img-1.png" />
+                    <div class="flex flex-col space-y-5">
+                     <p>Red Tshirt</p>   
+                    <p><span>$</span>55</p>
+                    <a href="#" class="text-red-500">Remove</a>
+                    </div>
+                    
+                    </div>
+                </td>
+                <td>
+                    <div class="flex space-x-3 justify-center ">
+                    <input class="w-[50px] " type="number" value="1" />
+                    <a class="edit-btn text-red-500" href="#">Edit</a>
+                    </div>
+                    
+                </td>
+                <td>
+                    <div class="flex justify-center pt-0">
+                    <span>$</span>
+                    <span class="font-bold">55</span>
+                    </div>    
+                </td>
+            </tr>
+        </table>
+
+
+     <div class="flex mx-[10%] ">
+        <table class="flex  w-full justify-end border-t-2 border-sky-600 border-w-2  ">
+            <tr class="flex mt-5" >
+            <td><span class="text-2xl mx-3">Subtotal</span></td>
+            <td><span class="text-2xl mx-3"> $55</span> </td>
+            </tr>
+            <tr class="flex space-x-10 mt-5" >
+                <td><span class="text-2xl mx-3">Total</span></td>
+                <td><span class="text-2xl mx-3"> $55</span> </td>
+            </tr>
+                         
+        </table>
+     </div>
+
+     <div class="flex justify-end mx-[10%] mt-5">
+        <button class="p-3 text-2xl font-bold  bg-sky-600 text-white rounded-lg hover:text-sky-600 hover:bg-white">
+           Checkout 
+        </button>
+     </div>
+
+
+
+
+    </section>
+
+
+</body>
+
+</html>

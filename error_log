@@ -1,0 +1,1 @@
+[25-Jul-2022 07:43:58 America/New_York] PHP Notice:  session_start(): A session had already been started - ignoring in /home/trixgxle/public_html/w/smart/login.php on line 84
