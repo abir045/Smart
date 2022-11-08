@@ -29,9 +29,6 @@ $featuredProducts =  $stmt->get_result();
 //fetching all products
 
 
-
-
-
 $limit = 4;
 
 if (isset($_GET['page'])) {
@@ -62,39 +59,9 @@ $row = mysqli_fetch_row($result);
 $total_rows = $row[0];
 
 
-//get the required number of pages
 
 
-// $total_pages = ceil($total_rows / $limit);
 
-// $pageURL = "";
-
-
-// if ($page_number >= 2) {
-//     echo "<a href=`index.php?page=" . ($page_number) . "`>Prev</a>";
-// }
-
-// for ($i = 1; $i <= $total_pages; $i++) {
-
-//     if ($i == $page_number) {
-
-//         $pageURL .= "<a class = 'active' href='index.php?page="
-
-//             . $i . "'>" . $i . " </a>";
-//     } else {
-
-//         $pageURL .= "<a href='index.php?page=" . $i . "'>   
-
-//                                                 " . $i . " </a>";
-//     }
-// };
-
-// echo $pageURL;
-
-// if ($page_number < $total_pages) {
-
-//     echo "<a href='index.php?page=" . ($page_number + 1) . "'>  Next </a>";
-// }
 
 
 //filter by category Food

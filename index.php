@@ -25,7 +25,7 @@
                 <h1 class="text-sky-400 font-bold text-3xl">
                     <a href="/">
                         Smart
-                        <!-- <img src="./assets/images/logo-sm.svg" /> -->
+
                     </a>
                 </h1>
 
@@ -161,20 +161,20 @@
             <h1 class="text-center text-3xl font-bold mt-[5%] tracking-widest">Our Universe</h1>
 
             <div class="flex justify-between  mt-5 mx-[10%]">
-                <ul class="flex flex-col items-center md:flex-row md:space-x-5 space-y-5 font-medium w-full mx-auto">
+                <ul class="flex flex-col items-center md:flex-row md:space-x-5 space-y-5  w-full mx-auto">
                     <li id="stayProducts" class="text-center w-full">
                         <!-- <img class="hidden md:flex rounded-lg hover:opacity-50" src="./assets/images/stay.jpg " /> -->
                         <img class="flex  rounded-lg hover:opacity-50 w-full" src="./assets/images/stay_mb.jpg " />
-                        <a href="#"><button onclick="showStayProducts();" class="text-lg tracking-wider hover:opacity-50">Stay</button></a>
+                        <a href="#"><button onclick="showStayProducts();" class="text-lg tracking-wider my-5 font-bold hover:opacity-50">Stay</button></a>
                     </li>
                     <li id="wellnessProducts" class="text-center w-full ">
                         <!-- <img class="hidden md:flex rounded-lg  hover:opacity-50" src="./assets/images/wellness.jpg " /> -->
                         <img class="flex  rounded-lg w-full hover:opacity-50" src="./assets/images/wellnessMb.jpg " />
-                        <a href="#"><button onclick="showWellnessProducts();" class="text-lg tracking-wider hover:opacity-50">Wellness</button> </a>
+                        <a href="#"><button onclick="showWellnessProducts();" class="text-lg tracking-wider my-5 font-bold hover:opacity-50">Wellness</button> </a>
                     </li>
                     <li id="sportsProducts" class="text-center w-full">
                         <img class="rounded-lg hover:opacity-50 w-full " src="./assets/images/sports_mb.jpg " />
-                        <a href="#"><button onclick="showSportsProducts();" class="text-lg tracking-wider hover:opacity-50">Sports</button></a>
+                        <a href="#"><button onclick="showSportsProducts();" class="text-lg tracking-wider my-5 font-bold hover:opacity-50">Sports</button></a>
                     </li>
                 </ul>
 
@@ -185,15 +185,15 @@
                     <li id="foodProducts" class="text-center w-full">
                         <!-- <img class="hidden md:flex rounded-lg hover:opacity-50" src="./assets/images/gastronomy.jpg" /> -->
                         <img class="flex w-full  rounded-lg hover:opacity-50" src="./assets/images/steak_mb.jpg" />
-                        <a href="#"><button onclick="showFoodProducts();" class="text-lg tracking-wider hover:opacity-50">Gastronomy</button></a>
+                        <a href="#"><button onclick="showFoodProducts();" class="text-lg tracking-wider font-bold my-5 hover:opacity-50">Gastronomy</button></a>
                     </li>
                     <li id="multiProducts" class="text-center w-full">
                         <img class="rounded-lg hover:opacity-50" src="./assets/images/multi_mb.jpg" />
-                        <a href="#"><button onclick="showMultiProducts();" class="text-lg tracking-wider hover:opacity-50">Multi Activities</button> </a>
+                        <a href="#"><button onclick="showMultiProducts();" class="text-lg tracking-wider font-bold my-5 hover:opacity-50">Multi Activities</button> </a>
                     </li>
                     <li class="text-center w-full">
-                        <img class="rounded-lg hover:opacity-50" src="./assets/images/spa_mb.jpg" />
-                        <a href="#"><button onclick="showSpaProducts();" class="text-lg tracking-wider hover:opacity-50">Spa</button> </a>
+                        <img class="rounded-lg hover:opacity-50 " src="./assets/images/spa_mb.jpg" />
+                        <a href="#"><button onclick="showSpaProducts();" class="text-lg tracking-wider font-bold my-5 hover:opacity-50">Spa</button> </a>
                     </li>
                 </ul>
 
@@ -206,13 +206,17 @@
 
         <!-- food products -->
 
-        <section id="food" class="flex flex-col">
-            <h1 class="text-center text-xl font-bold mt-[5%] tracking-widest">Food products</h1>
+        <section id="food" class="flex flex-col absolute top-0  py-[10%]  bg-amber-50">
+            <div class="flex justify-around items-center">
+                <div class="flex flex-col">
+                    <h1 class="flex text-center text-xl font-bold mt-[5%] tracking-widest">Food products</h1>
+                    <hr class="mx-auto bg-sky-400 h-[3px] w-[5%] mt-5" />
+                </div>
+                <i onclick="showFoodProducts();" class="flex fa-xl fa-solid fa-xmark"></i>
 
-
-            <hr class="mx-auto bg-sky-600 h-[3px] w-[5%] mt-5" />
-            <div class="flex">
-                <div class="grid  grid-cols-4 ">
+            </div>
+            <div class="flex mx-[5%]">
+                <div class="grid  grid-cols-1 md:grid-cols-4 ">
 
                     <?php while ($row = $foodProducts->fetch_assoc()) { ?>
 
@@ -221,13 +225,13 @@
                                 <div class="flex flex-col space-y-5 items-center my-5  drop-shadow-lg">
                                     <img class="flex" src="<?php echo $row['img'] ?>" />
                                     <h2 class="text-xl font-bold tracking-wider"><?php echo $row['title'] ?></h2>
-                                    <hr class="mx-auto bg-sky-600 h-[2px] w-[85%]" />
+                                    <hr class="mx-auto bg-sky-400 h-[2px] w-[85%]" />
                                     <h2 class="text-xl font-semibold tracking-widest opacity-40"><?php echo $row['dsc'] ?></h2>
                                     <h3 class="text-xl font-medium opacity-70">€<?php echo $row['price'] ?></h3>
                                     <h3 id="cat" class="text-xl font-medium opacity-70"><?php echo $row['cat'] ?></h3>
                                     <!-- redirect to single product page by clicking buy -->
                                     <a href="<?php echo 'single_product.php?id=' . $row['id'] ?>">
-                                        <button class="bg-sky-600 hover:text-sky-600 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
+                                        <button class="bg-sky-400 hover:text-sky-400 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
                                     </a>
                                 </div>
 
@@ -246,13 +250,17 @@
 
         <!-- Multitheme products -->
 
-        <section id="multi" class="flex flex-col">
-            <h1 class="text-center text-xl font-bold mt-[5%] tracking-widest">Multitheme products</h1>
+        <section id="multi" class="flex flex-col absolute top-0  py-[10%]  bg-amber-50">
+            <div class="flex justify-around items-center">
+                <div class="flex flex-col">
+                    <h1 class="flex text-center text-xl font-bold mt-[5%] tracking-widest">Multi-theme products</h1>
+                    <hr class="mx-auto bg-sky-400 h-[3px] w-[5%] mt-5" />
+                </div>
+                <i onclick="showMultiProducts();" class="flex fa-xl fa-solid fa-xmark"></i>
 
-
-            <hr class="mx-auto bg-sky-600 h-[3px] w-[5%] mt-5" />
-            <div class="flex">
-                <div class="grid  grid-cols-4 ">
+            </div>
+            <div class="flex mx-[5%]">
+                <div class="grid  grid-cols-1 md:grid-cols-4 ">
 
                     <?php while ($row = $multiThemesProducsts->fetch_assoc()) { ?>
 
@@ -261,13 +269,13 @@
                                 <div class="flex flex-col space-y-5 items-center my-5  drop-shadow-lg">
                                     <img class="flex" src="<?php echo $row['img'] ?>" />
                                     <h2 class="text-xl font-bold tracking-wider"><?php echo $row['title'] ?></h2>
-                                    <hr class="mx-auto bg-sky-600 h-[2px] w-[85%]" />
+                                    <hr class="mx-auto bg-sky-400 h-[2px] w-[85%]" />
                                     <h2 class="text-xl font-semibold tracking-widest opacity-40"><?php echo $row['dsc'] ?></h2>
                                     <h3 class="text-xl font-medium opacity-70">€<?php echo $row['price'] ?></h3>
                                     <h3 id="cat" class="text-xl font-medium opacity-70"><?php echo $row['cat'] ?></h3>
                                     <!-- redirect to single product page by clicking buy -->
                                     <a href="<?php echo 'single_product.php?id=' . $row['id'] ?>">
-                                        <button class="bg-sky-600 hover:text-sky-600 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
+                                        <button class="bg-sky-400 hover:text-sky-400 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
                                     </a>
                                 </div>
 
@@ -286,13 +294,17 @@
 
         <!-- Spa products -->
 
-        <section id="spa" class="flex flex-col">
-            <h1 class="text-center text-xl font-bold mt-[5%] tracking-widest">Spa products</h1>
+        <section id="spa" class="flex flex-col absolute top-0  py-[10%]  bg-amber-50">
+            <div class="flex justify-around items-center">
+                <div class="flex flex-col">
+                    <h1 class="flex text-center text-xl font-bold mt-[5%] tracking-widest">Spa products</h1>
+                    <hr class="mx-auto bg-sky-400 h-[3px] w-[5%] mt-5" />
+                </div>
+                <i onclick="showSpaProducts();" class="flex fa-xl fa-solid fa-xmark"></i>
 
-
-            <hr class="mx-auto bg-sky-600 h-[3px] w-[5%] mt-5" />
-            <div class="flex">
-                <div class="grid  grid-cols-4 ">
+            </div>
+            <div class="flex mx-[5%]">
+                <div class="grid  grid-cols-1 md:grid-cols-4 ">
 
                     <?php while ($row = $spaProducts->fetch_assoc()) { ?>
 
@@ -301,13 +313,13 @@
                                 <div class="flex flex-col space-y-5 items-center my-5  drop-shadow-lg">
                                     <img class="flex" src="<?php echo $row['img'] ?>" />
                                     <h2 class="text-xl font-bold tracking-wider"><?php echo $row['title'] ?></h2>
-                                    <hr class="mx-auto bg-sky-600 h-[2px] w-[85%]" />
+                                    <hr class="mx-auto bg-sky-400 h-[2px] w-[85%]" />
                                     <h2 class="text-xl font-semibold tracking-widest opacity-40"><?php echo $row['dsc'] ?></h2>
                                     <h3 class="text-xl font-medium opacity-70">€<?php echo $row['price'] ?></h3>
                                     <h3 id="cat" class="text-xl font-medium opacity-70"><?php echo $row['cat'] ?></h3>
                                     <!-- redirect to single product page by clicking buy -->
                                     <a href="<?php echo 'single_product.php?id=' . $row['id'] ?>">
-                                        <button class="bg-sky-600 hover:text-sky-600 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
+                                        <button class="bg-sky-400 hover:text-sky-400 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
                                     </a>
                                 </div>
 
@@ -344,13 +356,13 @@
                                 <div class="flex flex-col space-y-5 items-center my-5  drop-shadow-lg">
                                     <img class="flex" src="<?php echo $row['img'] ?>" />
                                     <h2 class="text-xl font-bold tracking-wider"><?php echo $row['title'] ?></h2>
-                                    <hr class="mx-auto bg-sky-600 h-[2px] w-[85%]" />
+                                    <hr class="mx-auto bg-sky-400 h-[2px] w-[85%]" />
                                     <h2 class="text-xl font-semibold tracking-widest opacity-40"><?php echo $row['dsc'] ?></h2>
                                     <h3 class="text-xl font-medium opacity-70">€<?php echo $row['price'] ?></h3>
                                     <!-- <h3 id="cat" class="text-xl font-medium opacity-70"><?php echo $row['cat'] ?></h3> -->
                                     <!-- redirect to single product page by clicking buy -->
                                     <a href="<?php echo 'single_product.php?id=' . $row['id'] ?>">
-                                        <button class="bg-sky-600 hover:text-sky-600 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
+                                        <button class="bg-sky-400 hover:text-sky-600 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
                                     </a>
                                 </div>
 
@@ -391,13 +403,13 @@
                                 <div class="flex flex-col space-y-5 items-center my-5  drop-shadow-lg">
                                     <img class="flex" src="<?php echo $row['img'] ?>" />
                                     <h2 class="text-xl font-bold tracking-wider"><?php echo $row['title'] ?></h2>
-                                    <hr class="mx-auto bg-sky-600 h-[2px] w-[85%]" />
+                                    <hr class="mx-auto bg-sky-400 h-[2px] w-[85%]" />
                                     <h2 class="text-xl font-semibold tracking-widest opacity-40"><?php echo $row['dsc'] ?></h2>
                                     <h3 class="text-xl font-medium opacity-70">€<?php echo $row['price'] ?></h3>
                                     <!-- <h3 id="cat" class="text-xl font-medium opacity-70"><?php echo $row['cat'] ?></h3> -->
                                     <!-- redirect to single product page by clicking buy -->
                                     <a href="<?php echo 'single_product.php?id=' . $row['id'] ?>">
-                                        <button class="bg-sky-600 hover:text-sky-600 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
+                                        <button class="bg-sky-400 hover:text-sky-400 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
                                     </a>
                                 </div>
 
@@ -441,13 +453,13 @@
                                 <div class="flex flex-col space-y-5 items-center my-5  drop-shadow-lg">
                                     <img class="flex" src="<?php echo $row['img'] ?>" />
                                     <h2 class="text-xl font-bold tracking-wider"><?php echo $row['title'] ?></h2>
-                                    <hr class="mx-auto bg-sky-600 h-[2px] w-[85%]" />
+                                    <hr class="mx-auto bg-sky-400 h-[2px] w-[85%]" />
                                     <h2 class="text-xl font-semibold tracking-widest opacity-40"><?php echo $row['dsc'] ?></h2>
                                     <h3 class="text-xl font-medium opacity-70">€<?php echo $row['price'] ?></h3>
                                     <!-- <h3 id="cat" class="text-xl font-medium opacity-70"><?php echo $row['cat'] ?></h3> -->
                                     <!-- redirect to single product page by clicking buy -->
                                     <a href="<?php echo 'single_product.php?id=' . $row['id'] ?>">
-                                        <button class="bg-sky-600 hover:text-sky-600 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
+                                        <button class="bg-sky-400 hover:text-sky-400 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
                                     </a>
                                 </div>
 
@@ -468,9 +480,9 @@
         <h1 class="text-center text-xl font-bold mt-[5%] tracking-widest">
             Featured products
         </h1>
-        <hr class="mx-auto bg-sky-600 h-[3px] w-[5%] mt-5" />
+        <hr class="mx-auto bg-sky-400 h-[3px] w-[5%] mt-5" />
 
-        <section class="flex flex-col md:flex-row mt-[5%] ">
+        <section class="flex flex-col md:flex-row mt-[5%] mx-[5%]">
 
             <?php while ($row = $featuredProducts->fetch_assoc()) { ?>
 
@@ -479,12 +491,12 @@
 
                         <img class="flex" src="<?php echo $row['img'] ?>" />
                         <h2 class="text-xl font-bold tracking-wider"><?php echo $row['title'] ?></h2>
-                        <hr class="mx-auto bg-sky-600 h-[2px] w-[85%]" />
+                        <hr class="mx-auto bg-sky-400 h-[2px] w-[85%]" />
                         <h2 class="text-xl font-semibold tracking-widest opacity-40"><?php echo $row['dsc'] ?></h2>
                         <h3 class="text-xl font-medium opacity-70">€<?php echo $row['price'] ?></h3>
                         <!-- redirect to single product page by clicking buy -->
                         <a href="<?php echo 'single_product.php?id=' . $row['id'] ?>">
-                            <button class="bg-sky-600 hover:text-sky-600 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
+                            <button class="bg-sky-400 hover:text-sky-400 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
                         </a>
 
                     </div>
@@ -495,11 +507,11 @@
         </section>
 
         <!-- all products section -->
-        <section id="allProducts" class="flex flex-col  ">
+        <section id="allProducts" class="flex flex-col mx-[5%]">
             <h1 class="text-center text-xl font-bold mt-[5%] tracking-widest">All products</h1>
 
 
-            <hr class="mx-auto bg-sky-600 h-[3px] w-[5%] mt-5" />
+            <hr class="mx-auto bg-sky-400 h-[3px] w-[5%] mt-5" />
 
             <div class="grid  grid-cols-1 md:grid-cols-4 ">
                 <?php while ($row = $allProducts->fetch_assoc()) { ?>
@@ -509,13 +521,13 @@
                             <div class="flex flex-col space-y-5 items-center my-5  drop-shadow-lg">
                                 <img class="flex" src="<?php echo $row['img'] ?>" />
                                 <h2 class="text-xl font-bold tracking-wider"><?php echo $row['title'] ?></h2>
-                                <hr class="mx-auto bg-sky-600 h-[2px] w-[85%]" />
+                                <hr class="mx-auto bg-sky-400 h-[2px] w-[85%]" />
                                 <h2 class="text-xl font-semibold tracking-widest opacity-40"><?php echo $row['dsc'] ?></h2>
                                 <h3 class="text-xl font-medium opacity-70">€<?php echo $row['price'] ?></h3>
-                                <!-- <h3 id="cat" class="text-xl font-medium opacity-70"><?php echo $row['cat'] ?></h3> -->
+
                                 <!-- redirect to single product page by clicking buy -->
                                 <a href="<?php echo 'single_product.php?id=' . $row['id'] ?>">
-                                    <button class="bg-sky-600 hover:text-sky-600 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
+                                    <button class="bg-sky-400 hover:text-sky-400 hover:bg-white font-bold text-white rounded-lg p-3">Buy Now</button>
                                 </a>
                             </div>
 
