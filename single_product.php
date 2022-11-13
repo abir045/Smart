@@ -49,10 +49,10 @@ if (isset($_GET['id'])) {
 <body>
   <div class="flex flex-col py-5 mx-[10%]">
     <div class="flex space-x-5 items-center justify-between">
-      <h1 class="text-sky-600 font-bold text-3xl">
+      <h1 class="text-sky-400 font-bold text-3xl">
         <a href="/">
           Smart
-          <!-- <img src="./assets/images/logo-sm.svg" /> -->
+
         </a>
       </h1>
 
@@ -71,32 +71,13 @@ if (isset($_GET['id'])) {
             <i class="fa-solid fa-user"></i>
           </a>
 
-        <li>
+        <li class="cursor-pointer">
           <i class="fa-solid fa-cart-shopping"></i>
         </li>
       </ul>
     </div>
 
-    <!-- <ul class="flex justify-between text-sm items-center mt-10">
-      <li>
-        <p>All our Boxes</p>
-      </li>
-      <li>
-        <p>Stay</p>
-      </li>
-      <li>
-        <p>Sports & Adventure</p>
-      </li>
-      <li>
-        <p>Gastronomy</p>
-      </li>
-      <li>
-        <p>Wellness</p>
-      </li>
-      <li>
-        <p>Multi-Activities</p>
-      </li>
-    </ul> -->
+
   </div>
   <!-- product -->
 
@@ -114,12 +95,12 @@ if (isset($_GET['id'])) {
     <!-- text  -->
     <div class="flex flex-col space-y-5 w-full mt-[15%] mr-[5%]">
       <h5 class="text-3xl tracking-wider"><?php echo $row['title']; ?></h5>
-      <hr class="bg-sky-600 h-[2px] w-[30%]" />
+      <hr class="bg-sky-400 h-[2px] w-[30%]" />
       <h3 class="text-xl opacity-50 tracking-widest"><?php echo $row['dsc']; ?></h3>
       <h1 class="text-2xl">€<?php echo $row['price'] ?></h1>
       <!-- <div class="flex"> -->
       <input class="w-[50px] h-[50px]" type="number" value="1" name="number" />
-      <button class="bg-sky-600 text-white font-bold w-[60%] p-3 rounded-lg  hover:text-sky-600 hover:bg-white">Add to Cart</button>
+      <button class="bg-sky-400 text-white font-bold w-[60%] p-3 rounded-lg  hover:text-sky-400 hover:bg-white">Buy Now</button>
       <!-- </div> -->
       <h2 class="text-lg">Product Details</h2>
       <p class="w-full text-sm">Details of this product will be displayed shortly</p>
@@ -131,18 +112,7 @@ if (isset($_GET['id'])) {
 
   </section>
 
-  <script>
-    const mainImg = document.getElementById('main');
-    const smallImg = document.getElementsByClassName('small-img');
 
-
-    for (let i = 0; i < 4; i++) {
-
-      smallImg[i].onclick = function() {
-        mainImg.src = smallImg[i].src
-      }
-    }
-  </script>
 </body>
 
 </html>

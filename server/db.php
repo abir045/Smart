@@ -60,6 +60,41 @@ $total_rows = $row[0];
 
 
 
+//pagination for stay products
+
+$stay_limit = 20;
+
+if (isset($_GET['page'])) {
+    $stay_page_number = $_GET['page'];
+} else {
+    $stay_page_number = 1;
+}
+
+//get the nitial page number
+
+$initial_stay_page = ($stay_page_number - 1) * $stay_limit;
+
+
+//get data of selected rows per page
+
+$stmt9 = $conn->prepare("SELECT * FROM  `cor_prods` WHERE cat='6' LIMIT $initial_stay_page, $stay_limit ");
+
+$stmt9->execute();
+
+$stayProducts = $stmt9->get_result();
+
+
+$getStayQuery = "SELECT COUNT(*) FROM `cor_prods` WHERE cat='6' ";
+
+
+
+$stay_result = mysqli_query($conn, $getStayQuery);
+
+$stay_row = mysqli_fetch_row($stay_result);
+
+$stay_total_rows = $stay_row[0];
+
+echo $stay_total_rows;
 
 
 
@@ -96,11 +131,11 @@ $spaProducts = $stmt5->get_result();
 
 //filter by category stay
 
-$stmt6 = $conn->prepare("SELECT * FROM  `cor_prods`  WHERE cat='6' ");
+// $stmt6 = $conn->prepare("SELECT * FROM  `cor_prods`  WHERE cat='6' ");
 
-$stmt6->execute();
+// $stmt6->execute();
 
-$stayProducts = $stmt6->get_result();
+// $stayProducts = $stmt6->get_result();
 
 //var_dump($stayProducts);
 

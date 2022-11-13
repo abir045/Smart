@@ -184,15 +184,15 @@
                 <ul class="flex flex-col md:flex-row md:justify-center  md:space-x-5  space-y-5 font-medium">
                     <li id="foodProducts" class="text-center w-full">
                         <!-- <img class="hidden md:flex rounded-lg hover:opacity-50" src="./assets/images/gastronomy.jpg" /> -->
-                        <img class="flex w-full  rounded-lg hover:opacity-50" src="./assets/images/steak_mb.jpg" />
+                        <img class="flex w-full  rounded-lg hover:opacity-50 h-[85%]" src="./assets/images/steak_mb.jpg" />
                         <a href="#"><button onclick="showFoodProducts();" class="text-lg tracking-wider font-bold my-5 hover:opacity-50">Gastronomy</button></a>
                     </li>
                     <li id="multiProducts" class="text-center w-full">
                         <img class="rounded-lg hover:opacity-50" src="./assets/images/multi_mb.jpg" />
                         <a href="#"><button onclick="showMultiProducts();" class="text-lg tracking-wider font-bold my-5 hover:opacity-50">Multi Activities</button> </a>
                     </li>
-                    <li class="text-center w-full">
-                        <img class="rounded-lg hover:opacity-50 " src="./assets/images/spa_mb.jpg" />
+                    <li class="text-center w-full ">
+                        <img class="h-[85%] rounded-lg hover:opacity-50 " src="./assets/images/spa_mb.jpg" />
                         <a href="#"><button onclick="showSpaProducts();" class="text-lg tracking-wider font-bold my-5 hover:opacity-50">Spa</button> </a>
                     </li>
                 </ul>
