@@ -205,7 +205,7 @@ $food_row = mysqli_fetch_row($food_result);
 
 $food_total_rows = $food_row[0];
 
-echo $food_total_rows;
+// echo $food_total_rows;
 
 
 
@@ -243,7 +243,44 @@ $multi_row = mysqli_fetch_row($multi_result);
 
 $multi_total_rows = $multi_row[0];
 
-echo $multi_total_rows;
+// echo $multi_total_rows;
+
+
+//pagination for spa products
+
+$spa_limit = 20;
+
+if (isset($_GET['page'])) {
+    $spa_page_number = $_GET['page'];
+} else {
+    $spa_page_number = 1;
+}
+
+//get the nitial page number
+
+$initial_spa_page = ($spa_page_number - 1) * $spa_limit;
+
+
+//get data of selected rows per page
+
+$stmt14 = $conn->prepare("SELECT * FROM  `cor_prods` WHERE cat='7' LIMIT $initial_spa_page, $spa_limit ");
+
+$stmt14->execute();
+
+$spaProducts = $stmt14->get_result();
+
+
+$getSpaQuery = "SELECT COUNT(*) FROM `cor_prods` WHERE cat='7' ";
+
+
+
+$spa_result = mysqli_query($conn, $getSpaQuery);
+
+$spa_row = mysqli_fetch_row($spa_result);
+
+$spa_total_rows = $spa_row[0];
+
+// echo $spa_total_rows;
 
 
 
@@ -270,11 +307,11 @@ echo $multi_total_rows;
 
 //filter by category spa
 
-$stmt5 = $conn->prepare("SELECT * FROM  `cor_prods`  WHERE cat='7' ");
+// $stmt5 = $conn->prepare("SELECT * FROM  `cor_prods`  WHERE cat='7' ");
 
-$stmt5->execute();
+// $stmt5->execute();
 
-$spaProducts = $stmt5->get_result();
+// $spaProducts = $stmt5->get_result();
 
 // var_dump($spaProducts);
 

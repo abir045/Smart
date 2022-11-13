@@ -206,7 +206,7 @@
                     <li class="text-center w-full ">
 
 
-                        <a href="multi-themes.php"><img class="hidden md:flex rounded-lg  hover:opacity-50 " src="./assets/images/spa2.jpg " /></a>
+                        <a href="spa.php"><img class="hidden md:flex rounded-lg  hover:opacity-50 " src="./assets/images/spa2.jpg " /></a>
                         <p class="text-lg tracking-wider my-5 font-bold hover:opacity-50">Spa</p>
                     </li>
                 </ul>
