@@ -1,7 +1,7 @@
 const mbNav = document.getElementById("mbNav");
 mbNav.style.display = "none";
 
-function showNav() {
+function showNav(e) {
   // mbNav.style.display = "none";
 
   if (mbNav.style.display === "none") {

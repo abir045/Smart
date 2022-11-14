@@ -156,7 +156,7 @@
         </h1>
         <hr class="mx-auto bg-sky-400 h-[3px] w-[5%] mt-5" />
 
-        <section class="flex flex-col md:flex-row mt-[5%] mx-[5%]">
+        <section class="flex flex-col md:flex-row mt-[5%] mx-[5%] mb-[10%]">
 
             <?php while ($row = $featuredProducts->fetch_assoc()) { ?>
 

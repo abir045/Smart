@@ -56,7 +56,7 @@
                                         <h2 class="text-xl font-bold tracking-wider"><?php echo $stay_row['title'] ?></h2>
                                         <hr class="mx-auto bg-sky-400 h-[2px] w-[85%]" />
                                         <h2 class="text-xl font-semibold tracking-widest opacity-40"><?php echo $stay_row['dsc'] ?></h2>
-                                        <h3 class="text-xl font-medium opacity-70">€<?php echo $stay_row['price'] ?></h3>
+                                        <h3 class="price text-xl font-medium opacity-70">€<?php echo $stay_row['price'] ?></h3>
 
                                         <!-- redirect to single product page by clicking buy -->
                                         <a href="<?php echo 'single_product.php?id=' . $stay_row['id'] ?>">

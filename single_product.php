@@ -50,27 +50,7 @@ if (isset($_GET['id'])) {
 <body>
   <div class="flex flex-col py-5 mx-[10%]">
 
-    <!-- <div class="flex space-x-5 items-center justify-between">
-      <h1 class="text-sky-400 font-bold text-3xl">
-        <a href="/">
-          Smart
 
-        </a>
-      </h1>
-
-      
-
-      <ul class="flex items-center space-x-5 text-amber-500 text-xl"> -->
-    <!-- user login redirect -->
-    <!-- <li class="cursor-pointer"><a href="user.php">
-            <i class="fa-solid fa-user"></i>
-          </a>
-
-        <li class="cursor-pointer">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </li>
-      </ul>
-    </div> -->
 
 
   </div>

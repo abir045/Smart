@@ -31,30 +31,30 @@
     <ul class="hidden  text-base  font-medium tracking-wider   md:flex md:space-x-10  items-center mt-10">
 
 
-        <a href="#stayProducts">
+        <a href="stay.php">
             <li>
                 <p class="hover:text-sky-400">Stay</p>
             </li>
         </a>
 
-        <a href="#wellnessProducts">
+        <a href="wellness.php">
             <li>
                 <p class="hover:text-sky-400">Wellness</p>
             </li>
         </a>
-        <a href="#sportsProducts">
+        <a href="sports.php">
             <li>
                 <p class="hover:text-sky-400">Sports & Adventure</p>
             </li>
         </a>
 
-        <a href="#foodProducts">
+        <a href="gastronomy.php">
             <li>
                 <p class="hover:text-sky-400">Gastronomy</p>
             </li>
         </a>
 
-        <a href="#multiProducts">
+        <a href="multi-themes.php">
             <li>
                 <p class="hover:text-sky-400">Multi Activities</p>
             </li>
@@ -63,7 +63,7 @@
 
 
 
-        <a href="#spaProducts">
+        <a href="spa.php">
             <li>
                 <p class="hover:text-sky-400">Spa</p>
             </li>

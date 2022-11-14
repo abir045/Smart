@@ -18,7 +18,7 @@ if ($conn === false) {
 //$stmt->fetch();
 
 // create a prepared statement
-$stmt =  $conn->prepare("SELECT * FROM  `cor_prods` LIMIT 4");
+$stmt =  $conn->prepare("SELECT * FROM  `cor_prods` WHERE cat = '9'  LIMIT 4");
 
 // execute query
 $stmt->execute();
