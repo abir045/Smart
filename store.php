@@ -98,7 +98,7 @@ if (isset($_GET['buy'])) {
     <title><?php echo $site_name; ?> - Store</title>
 </head>
 
-<body data-topbar="dark" data-layout-mode="dark" data-sidebar="dark">
+<body data-topbar="light" data-layout-mode="light" data-sidebar="light">
     <div id="layout-wrapper">
         <?php include 'comp/nav.php'; ?>
 
@@ -195,6 +195,7 @@ if (isset($_GET['buy'])) {
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="widget-content widget-content-area">';
                             while ($row = mysqli_fetch_assoc($result)) {
                                 //get stock |
@@ -244,7 +245,7 @@ if (isset($_GET['buy'])) {
             </div>
         </div>
 
-        <?php include('comp/footer.php'); ?>
+        <!-- <?php include('comp/footer.php'); ?>  -->
 
 
 
@@ -257,7 +258,8 @@ if (isset($_GET['buy'])) {
             display: inline-block;
             width: 350px;
             margin: 10px;
-            background: #191e3a;
+            background: #ffffff;
+            /* #191e3a; */
         }
 
         #card_9 {
