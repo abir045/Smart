@@ -148,6 +148,7 @@
 
         <section class="flex flex-col" id="stay">
 
+            <!-- serachbar -->
             <div class="flex pt-2 relative mx-auto text-gray-600">
                 <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-2xl text-sm focus:outline-none" id="searchbar" type="text" name="search" placeholder="Search for a product.." onkeyup="searchProduct();">
                 <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
@@ -169,7 +170,7 @@
 
                             <div class="justify-evenly mx-2">
                                 <div class="flex flex-col space-y-5 items-center my-5  drop-shadow-lg">
-                                    <div class="flex flex-col space-y-5 items-center my-5  drop-shadow-lg stayProducts">
+                                    <div class="flex flex-col space-y-5 items-center my-5  drop-shadow-lg Products">
                                         <img class="flex" src="<?php echo $stay_row['img'] ?>" />
                                         <h2 class="text-xl font-bold tracking-wider"><?php echo $stay_row['title'] ?></h2>
                                         <hr class="mx-auto bg-sky-400 h-[2px] w-[85%]" />
@@ -251,27 +252,8 @@
 
 
 
-    <script>
-        function searchProduct() {
-            //get the value of input text
-            let input = document.getElementById("searchbar").value;
+    <script src="/assets/js/Search.js">
 
-            input = input.toLowerCase();
-
-            // getting the classname of the div containing products
-            let x = document.getElementsByClassName("stayProducts");
-
-            for (i = 0; i < x.length; i++) {
-                if (!x[i].innerHTML.toLowerCase().includes(input)) {
-                    x[i].style.display = "none";
-                } else {
-                    x[i].style.display = "flex"
-                }
-            }
-
-
-
-        }
     </script>
 </body>
 
