@@ -161,7 +161,7 @@
             <h1 class="text-center text-3xl font-bold mt-[5%] tracking-widest">Our Universe</h1>
 
             <div class="flex justify-between  mt-5 mx-[10%]">
-                <ul class="flex flex-col items-center md:flex-row md:space-x-5   w-full mx-auto">
+                <ul class="flex flex-col items-center md:flex-row md:space-x-5   w-full ">
                     <li id="stayProducts" class="text-center w-full">
 
                         <a href="stay.php"><img class="hidden md:flex rounded-lg hover:opacity-50 " src="./assets/images/stay.jpg " /></a>
@@ -173,7 +173,10 @@
                         <p class="text-lg tracking-wider my-5 font-bold hover:opacity-50">Wellness</p>
 
                     </li>
+                </ul>
 
+
+                <ul class="flex flex-col items-center md:flex-row md:space-x-5 w-full mx-auto">
 
                     <li id="sportsProducts" class="text-center w-full">
                         <!-- <img class="rounded-lg hover:opacity-50 w-full " src="./assets/images/sports_mb.jpg " />
@@ -182,24 +185,20 @@
                         <p class="text-lg tracking-wider my-5 font-bold hover:opacity-50">Sports</p>
 
                     </li>
-
-
-                </ul>
-
-            </div>
-
-            <div class="flex justify-center items-center   mx-[10%]">
-                <ul class="flex flex-col md:flex-row md:justify-center  md:space-x-5  font-medium">
                     <li id="foodProducts" class="text-center w-full">
 
-                        <a href="gastronomy.php"><img class="hidden md:flex rounded-lg  hover:opacity-50 " src="./assets/images/steak.jpg " /></a>
+                        <a href="gastronomy.php"><img class="flex rounded-lg  hover:opacity-50 " src="./assets/images/steak.jpg " /></a>
                         <p class="text-lg tracking-wider my-5 font-bold hover:opacity-50">Gastronomy</p>
 
                     </li>
+
+                </ul>
+                <ul class="flex flex-col items-center md:flex-row md:space-x-5 w-full mx-auto">
+
                     <li id="multiProducts" class="text-center w-full">
 
 
-                        <a href="multi-themes.php"><img class="hidden md:flex rounded-lg  hover:opacity-50 " src="./assets/images/multi2.jpg " /></a>
+                        <a href="multi-themes.php"><img class="flex rounded-lg  hover:opacity-50 " src="./assets/images/multi2.jpg " /></a>
                         <p class="text-lg tracking-wider my-5 font-bold hover:opacity-50">Multi-Themes</p>
 
                     </li>
@@ -209,9 +208,23 @@
                         <a href="spa.php"><img class="hidden md:flex rounded-lg  hover:opacity-50 " src="./assets/images/spa2.jpg " /></a>
                         <p class="text-lg tracking-wider my-5 font-bold hover:opacity-50">Spa</p>
                     </li>
+
                 </ul>
 
             </div>
+
+            <!-- <div class="flex  justify-center items-center   mx-[10%]"> -->
+            <!-- <ul class="flex  md:justify-center  md:space-x-5  font-medium"> -->
+            <!-- <li id="foodProducts" class="text-center w-full">
+
+                        <a href="gastronomy.php"><img class="flex rounded-lg  hover:opacity-50 " src="./assets/images/steak.jpg " /></a>
+                        <p class="text-lg tracking-wider my-5 font-bold hover:opacity-50">Gastronomy</p>
+
+                    </li> -->
+
+            <!-- </ul> -->
+
+            <!-- </div> -->
 
 
         </section>
