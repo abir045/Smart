@@ -7,6 +7,12 @@ function searchProduct() {
   // getting the classname of the div containing stay products
   let x = document.getElementsByClassName("Products");
 
+  // console.log(x);
+
+  const productsArray = [...x];
+
+  console.log(productsArray);
+
   // looping through products to to check if shown products matches input
   // if does not match, hide them, otherwise (if matches) show them
 
@@ -18,3 +24,17 @@ function searchProduct() {
     }
   }
 }
+
+// function filterPrice() {
+//   let y = document.getElementsByClassName("price");
+//   console.log(y);
+//   let x = document.getElementsByClassName("Products");
+
+//   for (let i = 0; i < y.length; i++) {
+//     if (y[i].innerHTML === "€50") {
+//       x[i].style.display = "flex";
+//     } else {
+//       x[i].style.display = "none";
+//     }
+//   }
+// }

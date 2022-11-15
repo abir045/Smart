@@ -50,9 +50,9 @@
 
                         <?php while ($spa_row = $spaProducts->fetch_assoc()) { ?>
 
-                            <div class="justify-evenly mx-2">
+                            <div class="justify-evenly mx-2 Products">
                                 <div class="flex flex-col space-y-5 items-center my-5  drop-shadow-lg">
-                                    <div class="flex flex-col space-y-5 items-center my-5  drop-shadow-lg Products">
+                                    <div class="flex flex-col space-y-5 items-center my-5  drop-shadow-lg ">
                                         <img class="flex" src="<?php echo $spa_row['img'] ?>" />
                                         <h2 class="text-xl font-bold tracking-wider"><?php echo $spa_row['title'] ?></h2>
                                         <hr class="mx-auto bg-sky-400 h-[2px] w-[85%]" />
