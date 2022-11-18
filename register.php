@@ -16,13 +16,13 @@ $cdate = date("Y-m-d H:i:s");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $ip = $_SERVER['REMOTE_ADDR'];
 
-  // if(isset($_POST['h-captcha-response']) && !empty($_POST['h-captcha-response'])){
-  //   $secret = '0x59Fb3D59DA04b6AF996866e611a4cf5993cefAd3';
-  //   $verifyResponse = file_get_contents('https://hcaptcha.com/siteverify?secret='.$secret.'&response='.$_POST['h-captcha-response'].'&remoteip='.$_SERVER['REMOTE_ADDR']);
-  //   $responseData = json_decode($verifyResponse);
-  //       if($responseData->success){
-  if (1) {
-    if (1) {
+  if (isset($_POST['h-captcha-response']) && !empty($_POST['h-captcha-response'])) {
+    $secret = '0x59Fb3D59DA04b6AF996866e611a4cf5993cefAd3';
+    $verifyResponse = file_get_contents('https://hcaptcha.com/siteverify?secret=' . $secret . '&response=' . $_POST['h-captcha-response'] . '&remoteip=' . $_SERVER['REMOTE_ADDR']);
+    $responseData = json_decode($verifyResponse);
+    if ($responseData->success) {
+      // if (1) {
+      //   if (1) {
 
       $username = mysqli_real_escape_string($conn, $_POST["username"]);
       $password = mysqli_real_escape_string($conn, $_POST["password"]);
@@ -224,7 +224,7 @@ http://www.trixdev.me/w/smart/ver.php?email=' . $email . '&hash=' . $hash . '
 
 <head>
   <meta charset="utf-8" />
-  <title>SmartStore - Register</title>
+  <title>smartbox - Register</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
   <meta content="Themesbrand" name="author" />
@@ -237,7 +237,7 @@ http://www.trixdev.me/w/smart/ver.php?email=' . $email . '&hash=' . $hash . '
   <script src="https://hcaptcha.com/1/api.js?hl=en" async defer></script>
 </head>
 
-<body data-topbar="dark" data-layout-mode="dark" data-sidebar="dark" style="display: flex;justify-content: center;align-items: center;height: 100vh;">
+<body data-topbar="light" data-layout-mode="light" data-sidebar="" style="display: flex;justify-content: center;align-items: center;height: 100vh;">
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-md-12 col-lg-4">
@@ -250,12 +250,12 @@ http://www.trixdev.me/w/smart/ver.php?email=' . $email . '&hash=' . $hash . '
                   <img src="assets/images/logo-sm.svg" alt="" height="30">
                 </span>
                 <span class="logo-lg">
-                  <img src="assets/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">SmartStore</span>
+                  <img src="assets/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">smartbox</span>
                 </span>
               </a>
             </div>
             <div class="authent-text">
-              <p>Welcome to Smart Store</p>
+              <p>Welcome to smartbox</p>
               <p>Enter your details to create your account</p>
             </div>
             <?php
@@ -299,7 +299,7 @@ http://www.trixdev.me/w/smart/ver.php?email=' . $email . '&hash=' . $hash . '
               </div>
 
               <div class="mb-3">
-                <div class="h-captcha" data-sitekey="1ea3ac6b-f8d4-4cb6-9e66-98dcfda3d292" data-theme="dark"></div>
+                <div class="h-captcha" data-sitekey="1ea3ac6b-f8d4-4cb6-9e66-98dcfda3d292" data-theme="light"></div>
               </div>
 
               <div class="mb-3 form-check">

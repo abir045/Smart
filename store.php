@@ -95,7 +95,7 @@ if (isset($_GET['buy'])) {
 
 <head>
     <?php include('comp/head.php'); ?>
-    <title><?php echo $site_name; ?> - Store</title>
+    <title><?php echo $site_name; ?> - Store </title>
 </head>
 
 <body data-topbar="light" data-layout-mode="light" data-sidebar="light">

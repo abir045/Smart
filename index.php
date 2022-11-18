@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/5720664193.js" crossorigin="anonymous"></script>
     <!-- style sheet -->
@@ -12,7 +13,7 @@
     <!-- tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <title>Smart.</title>
+    <title>smartbox</title>
     <?php include('./navbar.php'); ?>
 </head>
 
@@ -85,6 +86,22 @@
                 </ul>
 
             </div>
+
+            <!-- extar category addition -->
+            <!-- <div class="hidden md:flex  md:justify-center items-center   mx-[37%]"> -->
+            <!-- <ul class="flex  justify-center  md:space-x-5  font-medium"> -->
+            <!-- <li id="foodProducts" class="text-center "> -->
+            <!-- insert the image url src you want to add and or keep it in images and point it here -->
+            <!-- <a href="gastronomy.php"><img class="flex mx-auto rounded-lg   hover:opacity-50 " src="./assets/images/steak.jpg " /></a> -->
+            <!-- <p class="text-lg tracking-wider my-5 font-bold hover:opacity-50">Add to name of the category</p> -->
+
+            <!-- </li> -->
+
+
+
+            <!-- </ul> -->
+
+            <!-- </div> -->
 
             <!-- mb category -->
 
